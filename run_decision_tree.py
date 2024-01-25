@@ -7,16 +7,13 @@ import matplotlib.pyplot as pyplot
 
 dataset = pandas.read_csv("temperature_data.csv")
 
-# print(dataset)
-
 dataset = pandas.get_dummies(dataset)
 
 dataset = dataset.sample(frac=1).reset_index()
-
 print(dataset)
 
 target = dataset['actual'].values
-# print(target)
+print(target)
 
 data = dataset.drop('actual', axis = 1)
 # data = data.drop('historical', axis = 1)
